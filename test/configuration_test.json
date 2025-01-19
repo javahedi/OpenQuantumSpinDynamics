@@ -1,0 +1,21 @@
+{
+    "lattice_length": 60,
+    "lattice_size": 6,
+    "γ": 0.1,
+    "J": 1.0,
+    "Δ": 1.0,
+    "α": 1.0,
+    "n_disorder": 100,
+    "n_sample": 100, 
+    "initial_state_type": "neel",
+    "initial_state_direction": "z",
+    "magnetization_type": "staggered",
+    "collapse_operator_type": "decay",
+    "use_gpu": false,
+
+
+    "solver_type": "KrylovArnoldi",
+    "_comment_method": " Lindblad solver: metho : 'ode'  or 'expm'. KrylovArnoldi solver: metho : 'krylov'  or 'arnoldi'.",
+    "method": "arnoldi"
+    
+}
