@@ -82,14 +82,14 @@ This will install all required dependencies listed in the `Project.toml` file.
 
 Run the main simulation script with 4 threads:
 ```bash
-julia --project=../OpenQuantumSpinDynamics -t 4 main.jl
+julia --project=. -t 4 examples/main.jl   
 ```
 
 ### Generating Plots
 
 Generate visualization of the simulation results:
 ```bash
-julia --project=../OpenQuantumSpinDynamics plot.jl
+julia --project=. examples/plot.jl   
 ```
 
 ## Contribution Guidelines
@@ -101,7 +101,7 @@ Contributions are welcome! To contribute:
 
 Please ensure all changes pass the tests before submitting:
 ```julia
-julia --project=../OpenQuantumSpinDynamics test/runtests.jl
+julia --project=. test/runtests.jl
 ```
 
 ## License
