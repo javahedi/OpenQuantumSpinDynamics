@@ -59,7 +59,7 @@ OpenQuantumSpinDynamics
 
 ### Prerequisites
 
-Ensure that you have Julia installed on your system. The recommended version is Julia 1.8 or higher.
+Ensure that you have Julia installed on your system. The recommended version is Julia 1.11 or higher.
 
 ### Installation
 
