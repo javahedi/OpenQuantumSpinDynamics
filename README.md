@@ -29,27 +29,30 @@ This project leverages the power of Julia's ecosystem for high-performance numer
 
 ```
 OpenQuantumSpinDynamics
-├── Manifest.toml                 # Dependencies for the project
-├── Project.toml                 # Project metadata and dependencies
-├── src                          # Source code
-│   ├── Arnoldi.jl              # Implementation of the Arnoldi algorithm
-│   ├── Coupling.jl             # Tools for handling system coupling
-│   ├── Disorder.jl             # Modules for introducing disorder in systems
-│   ├── KrylovArnoldiSolver.jl  # Efficient Krylov space solver
-│   ├── LindbladSolver.jl       # Solver for Lindblad master equations
-│   ├── OpenQuantumSpinDynamics.jl # Main library module
-│   ├── PauliOps.jl             # Pauli operators utilities
-│   ├── QuantumState.jl         # Representation and operations on quantum states
-│   ├── Solvers.jl              # General solver implementations
-│   ├── SpinModels.jl           # Models for quantum spin systems
-│   ├── StochasticWavefunctionSolver.jl # Solver for stochastic wavefunctions
-│   ├── setup.jl                # Setup configurations
-│   └── utils.jl                # Helper functions and utilities
-├── test                        # Test suite
-│   ├── configuration_test.json # Sample configuration for tests
-│   └── runtests.jl             # Test runner
-├── main.jl                     # Main entry point for running simulations
-└── plot.jl                     # Script for generating plots
+    ├── Manifest.toml
+    ├── Project.toml
+    ├── README.md
+    ├── examples
+    │   ├── configuration.json
+    │   ├── main.jl
+    │   └── plot.jl
+    ├── src
+    │   ├── Arnoldi.jl
+    │   ├── Coupling.jl
+    │   ├── Disorder.jl
+    │   ├── KrylovArnoldiSolver.jl
+    │   ├── LindbladSolver.jl
+    │   ├── OpenQuantumSpinDynamics.jl
+    │   ├── PauliOps.jl
+    │   ├── QuantumState.jl
+    │   ├── Solvers.jl
+    │   ├── SpinModels.jl
+    │   ├── StochasticWavefunctionSolver.jl
+    │   ├── setup.jl
+    │   └── utils.jl
+    └── test
+        ├── configuration_test.json
+        └── runtests.jl
 ```
 
 ## Quick Start
