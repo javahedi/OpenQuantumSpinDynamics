@@ -2,8 +2,6 @@
 
 [![CI Pipeline](https://github.com/javahedi/OpenQuantumSpinDynamics/actions/workflows/ci.yml/badge.svg)](https://github.com/javahedi/OpenQuantumSpinDynamics/actions/workflows/ci.yml)
 
-![Code Style](https://img.shields.io/badge/code%20style-JuliaFormatter-blue)
-
 OpenQuantumSpinDynamics is a Julia-based library designed for simulating the dynamics of open quantum spin systems. The library provides robust tools for solving Lindblad master equations, stochastic wavefunctions, and analyzing spin models with a variety of solvers. 
 
 This project leverages the power of Julia's ecosystem for high-performance numerical computing and is optimized for parallel execution.
