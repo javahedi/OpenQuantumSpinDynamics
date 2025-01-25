@@ -1,5 +1,7 @@
 # OpenQuantumSpinDynamics
 
+[![CI Pipeline](https://github.com/javahedi/OpenQuantumSpinDynamics/actions/workflows/ci.yml/badge.svg)](https://github.com/javahedi/OpenQuantumSpinDynamics/actions/workflows/ci.yml)
+
 OpenQuantumSpinDynamics is a Julia-based library designed for simulating the dynamics of open quantum spin systems. The library provides robust tools for solving Lindblad master equations, stochastic wavefunctions, and analyzing spin models with a variety of solvers. 
 
 This project leverages the power of Julia's ecosystem for high-performance numerical computing and is optimized for parallel execution.
@@ -27,34 +29,37 @@ This project leverages the power of Julia's ecosystem for high-performance numer
 
 ```
 OpenQuantumSpinDynamics
-├── Manifest.toml                 # Dependencies for the project
-├── Project.toml                 # Project metadata and dependencies
-├── src                          # Source code
-│   ├── Arnoldi.jl              # Implementation of the Arnoldi algorithm
-│   ├── Coupling.jl             # Tools for handling system coupling
-│   ├── Disorder.jl             # Modules for introducing disorder in systems
-│   ├── KrylovArnoldiSolver.jl  # Efficient Krylov space solver
-│   ├── LindbladSolver.jl       # Solver for Lindblad master equations
-│   ├── OpenQuantumSpinDynamics.jl # Main library module
-│   ├── PauliOps.jl             # Pauli operators utilities
-│   ├── QuantumState.jl         # Representation and operations on quantum states
-│   ├── Solvers.jl              # General solver implementations
-│   ├── SpinModels.jl           # Models for quantum spin systems
-│   ├── StochasticWavefunctionSolver.jl # Solver for stochastic wavefunctions
-│   ├── setup.jl                # Setup configurations
-│   └── utils.jl                # Helper functions and utilities
-├── test                        # Test suite
-│   ├── configuration_test.json # Sample configuration for tests
-│   └── runtests.jl             # Test runner
-├── main.jl                     # Main entry point for running simulations
-└── plot.jl                     # Script for generating plots
+    ├── Manifest.toml
+    ├── Project.toml
+    ├── README.md
+    ├── examples
+    │   ├── configuration.json
+    │   ├── main.jl
+    │   └── plot.jl
+    ├── src
+    │   ├── Arnoldi.jl
+    │   ├── Coupling.jl
+    │   ├── Disorder.jl
+    │   ├── KrylovArnoldiSolver.jl
+    │   ├── LindbladSolver.jl
+    │   ├── OpenQuantumSpinDynamics.jl
+    │   ├── PauliOps.jl
+    │   ├── QuantumState.jl
+    │   ├── Solvers.jl
+    │   ├── SpinModels.jl
+    │   ├── StochasticWavefunctionSolver.jl
+    │   ├── setup.jl
+    │   └── utils.jl
+    └── test
+        ├── configuration_test.json
+        └── runtests.jl
 ```
 
 ## Quick Start
 
 ### Prerequisites
 
-Ensure that you have Julia installed on your system. The recommended version is Julia 1.8 or higher.
+Ensure that you have Julia installed on your system. The recommended version is Julia 1.11 or higher.
 
 ### Installation
 
@@ -77,14 +82,14 @@ This will install all required dependencies listed in the `Project.toml` file.
 
 Run the main simulation script with 4 threads:
 ```bash
-julia --project=../OpenQuantumSpinDynamics -t 4 main.jl
+julia --project=. -t 4 examples/main.jl   
 ```
 
 ### Generating Plots
 
 Generate visualization of the simulation results:
 ```bash
-julia --project=../OpenQuantumSpinDynamics plot.jl
+julia --project=. examples/plot.jl   
 ```
 
 ## Contribution Guidelines
@@ -96,7 +101,7 @@ Contributions are welcome! To contribute:
 
 Please ensure all changes pass the tests before submitting:
 ```julia
-julia --project=../OpenQuantumSpinDynamics test/runtests.jl
+julia --project=. test/runtests.jl
 ```
 
 ## License
