@@ -85,9 +85,18 @@ function initialize_system(params::Dict{String, Any})
     if magnetization_type == "staggered"
         Z_obser = sum([(-1)^i .* paulis.Zop[i] for i in 1:N])
         X_obser = sum([(-1)^i .* paulis.Xop[i] for i in 1:N])
+        # spin zz or xx correlations are symmetric under exchange of spins
+        ZZ_obser = sum((-1)^(i + j) * paulis.Zop[i] * paulis.Zop[j] for i in 1:N-1, j in i+1:N)
+        XX_obser = sum((-1)^(i + j) * paulis.Xop[i] * paulis.Xop[j] for i in 1:N-1, j in i+1:N)
+        #ZZ_obser = sum((-1)^(i+J) .* paulis.Zop[i] * paulis.Zop[j] for i in 1:N, j in 1:N if i != j)
+        #XX_obser = sum((-1)^(i+J) .* paulis.Xop[i] * paulis.Xop[j] for i in 1:N, j in 1:N if i != j)
     elseif magnetization_type == "uniform"
         Z_obser = sum([paulis.Zop[i] for i in 1:N])
         X_obser = sum([paulis.Xop[i] for i in 1:N])
+        ZZ_obser = sum(paulis.Zop[i] * paulis.Zop[j] for i in 1:N-1, j in i+1:N)
+        XX_obser = sum(paulis.Xop[i] * paulis.Xop[j] for i in 1:N-1, j in i+1:N)
+        #ZZ_obser = sum(paulis.Zop[i] * paulis.Zop[j] for i in 1:N, j in 1:N if i != j)
+        #XX_obser = sum(paulis.Xop[i] * paulis.Xop[j] for i in 1:N, j in 1:N if i != j)
     else
         error("Invalid magnetization_type: '$magnetization_type'. Choose 'staggered' or 'uniform'.")
     end
