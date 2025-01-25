@@ -1,12 +1,12 @@
 {
-    "lattice_length": 60,
-    "lattice_size": 6,
+    "lattice_length": 100,
+    "lattice_size": 10,
     "γ": 0.1,
     "J": 1.0,
-    "Δ": 1.0,
+    "Δ": 0.0,
     "α": 2.0,
     "n_disorder": 100,
-    "n_sample": 100, 
+    "n_sample": 200, 
     "initial_state_type": "neel",
     "initial_state_direction": "z",
     "magnetization_type": "staggered",
@@ -14,8 +14,8 @@
     "use_gpu": false,
 
 
-    "solver_type": "KrylovArnoldi",
+    "solver_type": "swf",
     "_comment_method": " Lindblad solver: metho : 'ode'  or 'expm'. KrylovArnoldi solver: metho : 'krylov'  or 'arnoldi'.",
-    "method": "arnoldi"
+    "method": "swf"
     
 }
